@@ -1,7 +1,7 @@
+/* Resetting default margin and padding */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 /* Body styles */
@@ -11,62 +11,69 @@ body {
 
 /* Header styles */
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: pink; /* Pink background for header */
 }
 
+/* Logo styles */
+.logo img {
+  max-width: 100px;
+}
+
+/* Navigation styles */
 nav ul {
   list-style-type: none;
-  display: flex;
 }
 
 nav ul li {
+  display: inline;
   margin-right: 20px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: pink;
+  font-weight: bold;
 }
 
+/* Video container styles */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  background-color: pink; /* Pink background for video */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Main section styles */
 .main {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
+  align-items: center;
+  padding: 50px;
 }
 
-.video-container {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
+/* Bio styles */
 .bio {
   flex: 1;
 }
 
 .bio h1 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.bio p {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
+/* Image styles */
 .image {
   flex: 1;
-  margin-left: 20px;
 }
 
 .image img {
@@ -74,197 +81,174 @@ nav ul li a {
   height: auto;
 }
 
+/* Footer styles */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: pink; /* Pink background for footer */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info {
+  text-align: right;
+  position: left;
+}
+
+/* Social links styles */
+.social-links {
+  list-style-type: none;
+  margin-right: auto;
+}
+
+.social-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+/* Map styles */
+.map {
+  flex: 1;
+  text-align: right;
+}
+
+#mapFrame {
+  position: right;
+  bottom: 0;
+  right: 95px;
+  margin-left: 88%;
+  width: 10%;
+  height: 70%;
+  border: none; 
+  z-index: 1;
+}
+/* Header styles */
+header {
+  background-color: #f9f9f9;
   padding: 20px;
   text-align: center;
 }
 
-.social-links {
-  list-style-type: none;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.social-links li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.social-links li a {
-  color: #fff;
-  font-size: 24px;
-}
-
-iframe {
-  width: 100%;
-  height: 300px; 
-  margin-bottom: 20px;
-  
-}
-
-@media (max-width: 768px) {
-  .main {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .image {
-    margin-left: 0;
-    margin-top: 20px;
-  }
-}
-
-iframe.map {
-  position: right;
-  bottom: 0;
-  right: 100px;
-  width: 100px;
-  height: 100px;
-  border: none; 
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2; 
-}
-
-
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-
+/* Main section styles */
 .main {
-  margin: 20px auto;
-  max-width: 800px;
-  padding: 0 20px;
+  padding: 20px;
 }
 
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-th {
-  background-color: #333;
-  color: #fff;
-}
-
-
-.contact-form {
+/* Bio styles */
+.bio {
   margin-top: 20px;
 }
 
-.form-group {
-  margin-bottom: 20px;
+.bio h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-
-label {
-  font-weight: bold;
-}
-
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-
-.social-links {
-  list-style-type: none;
-  padding: 0;
-}
-
-.social-links li {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.social-links li a {
-  color: #fff;
-  text-decoration: none;
-}
-
-
-.btn-primary {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-}
-
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f2f2; 
-  margin: 0;
-  padding: 0;
-}
-
-
-header {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-h1 {
-  margin: 0;
-}
-
-
-.main {
-  margin: 20px auto;
-  max-width: 800px;
-  padding: 0 20px;
-}
-
-h2 {
-  color: #333;
-  margin-bottom: 20px;
-}
-
-
-.bio {
-  color: #333;
-  line-height: 1.6;
-}
-
 
 .bio ul {
   list-style: none;
   padding: 0;
 }
 
-.bio li {
+.bio ul li {
   margin-bottom: 10px;
 }
 
+.bio ul li strong {
+  font-weight: bold;
+}
 
-footer {
-  background-color: #333 ;
+.bio p {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* Additional styling for section headings */
+h3 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header, footer {
+  background-color: #333;
   color: #fff;
   text-align: center;
   padding: 20px 0;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Social Links Styles */
+.social-links {
+  list-style: none;
+  padding: 0;
+}
+
+.social-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+      font-size: 24px;
+  }
+
+  .container {
+      padding: 10px;
+  }
 }
