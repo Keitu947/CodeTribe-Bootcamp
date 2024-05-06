@@ -66,3 +66,48 @@ document.addEventListener("DOMContentLoaded", function () {
     experienceList.appendChild(listItem);
   });
 });
+
+function handleFormSubmit(event) {
+  event.preventDefault()
+  // console.log(event);
+
+  // console.log(document);
+  const emailInput = document.getElementById("email")
+  const messageInput = document.getElementById("message")
+
+  // console.log(emailInput);
+  const isEmailValid = emailInput.value.trim() !== '' && emailInput.validity.valid
+  console.log(isEmailValid);
+  let isMessageValid = messageInput.value.trim() !== '';
+  console.log({ isMessageValid });
+
+  const isFormValid = isEmailValid && isMessageValid
+
+  if (isFormValid) {
+    // grab our data from the form
+    const formData = new FormData(event.target);
+    console.log(formData);
+  
+    fetch('https://formspree.io/f/xpzvkoyp', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Handle successful form submission
+      console.log('Form submitted successfully!', data);
+    })
+    .catch(error => {
+      // Handle error
+      console.error('There was an error submitting the form:', error);
+    });
+  }
+}
